@@ -1,0 +1,32 @@
+·<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //ctrl+B：清空页面
+    // Sources：调试代码
+    // 包装对象也叫装箱操作
+    var name = "zhangsan";
+    var age =10;
+    function setName(){
+        name = "lisi";
+    } 
+    function setAge(){
+        age = 20;
+    }
+    function setInfor(){
+        setName();
+        setAge();
+    }
+    setInfor();
+    console.log(name);
+    console.log(age);
+</script>
+</html>

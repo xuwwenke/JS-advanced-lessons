@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        //  基本数据类型
+            var n1=20;
+            var n2=n1;
+            n1=10;
+            console.log(n2);//输出20
+
+        //应用数据类型
+            var obj1={"username":"zhangsan"};
+            var obj2=obj1;
+            obj2.username="lisi";
+            console.log(obj1);//输出lisi
+            //用户名的分配在堆区，obj1,obj2 
+            //所指向的对象一样，对obj2进行改动所以obj1也同时进行改动
+
+            var arr1=[1,2,3,4,5];
+            var arr2=arr1;
+            arr2[0]=6;
+            console.log(arr1);
+
+            var obj3={"username":"zhangsan"};
+            var obj4={};
+            var username=obj3.username;
+            obj4.username=username;
+            console.log(obj4);
+
+            var n3=10;
+            var n4=10;
+            console.log(n3==n4);//值相同就true，===是类型与数值都相同
+
+            var obj5={};
+            var obj6={};
+            console.log(obj5==obj6);//引用类型是判断所指向的内存空间是否相同
+
+            var a=6;
+            function fn1(x){
+                x=5;
+            }
+            fn1(a);
+            console.log(a);//输出6
+
+            var obj7={"name":"zhangsan"};
+            function fn1(x){
+                x.name="lisi";
+            }
+            fn1(obj7);
+            console.log(obj7);
+
+            //截取符
+            //str.slice(截取字符串起始长度，负数为反方向的取值)；
+
+            //分隔符
+            str.split();//在括号内填写分割的符号，将子串作为数组的元素，得到数组
+    </script>
+</html>
