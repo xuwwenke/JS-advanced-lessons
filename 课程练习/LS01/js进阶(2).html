@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var num1=20;
+	//toFixed(n)保留特定位数的小数
+	//超出特定位数的四舍五入，返回的是字符串
+	num1.toFixed(3);
+
+	var num1=20;
+	var numobject=new Number(num1);
+	console.log(numobject._proto_==Number.prototype);
+
+	numobject.toFixed();
+
+	var num2=1234.6789;
+	var r=num2.toPrecision(2);
+	//toPrecision(数字位数)，四舍五入
+	//数组位个数小于数字的整数位时，表示成指数形式
+	//大于或等于数字整数位时，直接四舍五入截取
+	console.log(r);
+
+	console.log(num2.toString(16));
+
+	console.log("abcde".charAt(2));//返回特定位置的字符
+	// String.fromCharCode(97,98,99);
+	// 将特定的Unicode转化为字符
+	//
+	//将特定索引位置字符转化为Unicode码输出
+	var str="abcdefghijkl";
+	str.charCodeAt(0);
+
+	str.slice(0,-1);
+	//slice(起始位置，截取的结束位置)
+	//如果截取的结束位置下雨0的，实际结束位置为
+	//str.length+截取结束参数
+	
+	//substr(截取的起始位置，截取的长度)
+	//截取长度可以缺省，表示从起始位置到字符串结束
+	str.substr(0,3);
+
+	str.substring(0,3);
+	//substring(截取起始位置，截取结束位置)
+	//如果截取起始位置值>截取结束位置，两者
+	//会互换位置
+	//超出0-str.length范围，会被截断
+	//
+	//split(分隔符，限定生成数组的长度)
+	str.split();
+
+	var str1="     ab     c   ";
+	str1.trim();//去掉起始和结尾的空格
+
+	var str2="abcdef";
+	//conct，拼接字符串
+	//indexOf（查找的特定字符，查找的起始位置）；
+	//返回值是查找到的起始位置，找不到，返回值为-1；
+	//
+	//空字符串表示什么都没有
+	//indexOf（查找的特定字符，查找的起始位置）；//不加查找位置，系统默认从第一个开始找；
+</script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//ES5 ECMAScript是一个语言标准，JavaScript是
+		//完全基于ECMAScript实现的脚本语言
+		//ES5是ECMAScript5简写，当前主流ES5 ES6
+		//ES5标准下，没有块级作用域
+		// if(false){
+		//     var name = "zhangsan";
+		// }
+		// console.log(name);//undefined
+
+		for(var i=1;i<3;i++){
+
+		}
+		console.log(i);//输出3
+
+		//非严格模式下，不使用var来显示声明变量，则该变量自动转换为全局变量
+		function fn1(){
+			name ="zhangsan";
+		}
+		function fn2(){
+			var name = "lisi";
+		}
+		fn1();
+		fn2();
+		console.log(name);
+		// 'use strict'//此语句必须放在script最前面
+		function fn3(){
+			console.log(this);
+		}
+		fn3();
+
+		//严格模式下，在普通函数内，this指向undefined
+		function fn4(){
+			// 'use strict'
+			console.log(this);
+		}
+		fn4();
+		// 'use strict'
+		function judge(){
+			var result=(this===undefined?true:false);
+			console.log(result);
+		}
+		if(judge()){
+			console.log("严格模式");
+		}else{
+			console.log("非严格模式");
+		}
+		judge();
+
+		
+		var str="abcde";
+		str.length=1;//不会对实际值有影响
+		console.log(str.length);
+
+		//解释器的理解
+		var str="abcde";
+		var strObject=new String(str);//创建一个临时对象
+		strObject.length=1;
+		console.log(new String(str).length);
+
+
+
+		//switch的值和case的值进行的是全等比较，值和类型都要比较
+		var index=1;
+		switch(index){
+			case '1':
+				console.log("星期一");
+				break;
+			case '2':
+				console.log("星期二");
+				break;
+			default:
+				console.log("没有该选项");
+		}
+		//switch的穿透性
+		var index=1;
+		switch(index){
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+				console.log("工作日");
+				break;
+			case 6:
+			case 7:
+				console.log("休息日");
+				break;
+		}
+	</script>
+</body>
+</html>
